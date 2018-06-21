@@ -20,8 +20,15 @@
 
 ### 環境建置
 #### 1. 安裝Vue-cli
+
+使用 npm 
 ```
 npm install -g vue-cli
+```
+
+使用 yarn
+```
+yarn global add vue-cli
 ```
 
 #### 2. 找個地方建立專案
@@ -41,17 +48,20 @@ vue init webpack vue-book-club
 ? Set up unit tests Yes // [可選]建議先裝JEST日後有空可讀這個
 ? Pick a test runner jest
 ? Setup e2e tests with Nightwatch? Yes // [可選]建議先裝起來，日後有空可讀這個
-? Should we run `npm install` for you after the project has been created? (recommended) npm // [可選]我是用NPM啦
+? Should we run `npm install` for you after the project has been created? (recommended) npm // [可選]我是用NPM啦 (yarn 比較快喔!)
 ```
 
 #### 3. 進入專案目錄
 `cd vue-book-club`
 
-#### 4. 安裝套件
+#### 4. 安裝套件 (npm/yarn 擇一使用)
+
 1. **Sass(Scss)**  
 `npm install sass sass-loader node-sass --save`  
+`yarn add sass sass-loader node-sass`
 2. **Pug** - 建議裝著，可選用  
 `npm install pug pug-loader pug-filters --save`  
+`yarn add pug pug-loader pug-filters`
 3. 安裝package.json內其它套件  
 `npm install`  
 
@@ -74,6 +84,8 @@ vue init webpack vue-book-club
 > 因為Prettier code目前不支援standard的function空格設定所以小改一下  
 
 #### 6. 跑看看`npm run dev`，看有沒有出現hello world資訊
+
+或是 `yarn run start`
 
 ### 目標
 #### 第一週：
