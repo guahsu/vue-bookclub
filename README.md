@@ -64,6 +64,7 @@ vue init webpack vue-book-club
 `yarn add pug pug-loader pug-filters`
 3. 安裝package.json內其它套件  
 `npm install`  
+`yarn install`
 
 #### 5. 修改一下eslint規則 - for Prettier code / standard
 ```javascript
