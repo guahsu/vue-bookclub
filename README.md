@@ -96,6 +96,11 @@ vue init webpack vue-book-club
   (2)v-model, v-if, v-show, v-for, v-bind, v-on
 3. 簡易說明sass與pug
 
+#### 第二週：
+1. 介紹生命週期
+2. nvm 介紹(Node Version Manager)
+參考網址: https://medium.com/@toumasaya/node-js-%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A-for-mac-a2628836feaf
+
 ### 接著的目標：
 1. 生命週期(1)
 2. component
