@@ -28,6 +28,11 @@ export default new Router({
       path: '/week2/lifeCycle',
       name: 'lifeCycle',
       component: lifeCycle
+    },
+    {
+      path: '/week3_component/',
+      name: 'week3_component',
+      component: () => import('@/components/week3_component/Index')
     }
   ]
 })
