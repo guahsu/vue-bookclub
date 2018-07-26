@@ -33,6 +33,21 @@ export default new Router({
       path: '/week3_component/',
       name: 'week3_component',
       component: () => import('@/components/week3_component/Index')
+    },
+    {
+      path: '/week3_component2/',
+      name: 'week3_component2',
+      component: () => import('@/components/week3_component2/Index')
+    },
+    {
+      path: '/week3_component2/refactor',
+      name: 'week3_component2_refactor',
+      component: () => import('@/components/week3_component2/refactor/Index')
+    },
+    {
+      path: '/week3_component2/refactor2',
+      name: 'week3_component2_refactor2',
+      component: () => import('@/components/week3_component2/refactor2/Index')
     }
   ]
 })
