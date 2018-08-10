@@ -48,6 +48,11 @@ export default new Router({
       path: '/week3_component2/refactor2',
       name: 'week3_component2_refactor2',
       component: () => import('@/components/week3_component2/refactor2/Index')
+    },
+    {
+      path: '/week4_component/vuex_example',
+      name: 'week4_vuex_example',
+      component: () => import('@/components/week4_component/index')
     }
   ]
 })
