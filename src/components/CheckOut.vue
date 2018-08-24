@@ -8,21 +8,23 @@
         <div class="cart-product-price">{{ product.price }}</div>
         <div class="cart-product-remove" @click="removeProduct(index)">移除</div>
       </div>
-      <h2>總金額 {{ totalAmount }}</h2>
+      <h2>總金額 {{ cartItemTotalAmount }}</h2>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'CheckOut',
   data() {
     return {}
   },
   computed: {
-    totalAmount() {
-      return this.$store.state.shop.cartItems.reduce((total, product) => total + product.price, 0)
-    }
+    ...mapGetters('shop', ['cartItemTotalAmount'])
+    // totalAmount() {
+    //   return this.$store.state.shop.cartItems.reduce((total, product) => total + product.price, 0)
+    // }
   },
   methods: {
     removeProduct(index) {

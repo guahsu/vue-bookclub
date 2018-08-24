@@ -1,7 +1,8 @@
 <template>
   <div id="Index">
     <AppHeader></AppHeader>
-    <div class="product" v-for="product in productList" :key="product.id">
+    <h1 v-if="!productListData.length">讀取中</h1>
+    <div class="product" v-for="product in productListData" :key="product.id">
       <img class="product-img" src="@/assets/logo.png">
       <div class="product-name">{{ product.name }}</div>
       <div class="product-price">{{ product.price }}</div>
@@ -11,8 +12,9 @@
 </template>
 
 <script>
+// import shopAPI from '@/api/shop'
 import AppHeader from './AppHeader'
-import shopAPI from '@/api/shop'
+import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'ProductList',
   components: {
@@ -23,14 +25,20 @@ export default {
       productList: []
     }
   },
+  computed: {
+    ...mapGetters('shop', ['productListData'])
+  },
   created() {
-    shopAPI.getProductData().then(res => {
-      this.productList = res
-    })
+    this.getProductListData()
+    // shopAPI.getProductData().then(res => {
+    //   this.productList = res
+    // })
   },
   methods: {
+    ...mapActions('shop', ['addCartItem', 'getProductListData']),
     addToCart(product) {
-      this.$store.commit('shop/ADD_CART_ITEM', product)
+      this.addCartItem(product)
+      // this.$store.commit('shop/ADD_CART_ITEM', product)
       // this.$store.dispatch('shop/addCartItem', product)
     }
   }
